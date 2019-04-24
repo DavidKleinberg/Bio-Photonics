@@ -34,7 +34,7 @@ api_collection = endpoints.api(name='melanoma', version='v1.0')
 # [START messages]
 class MelanomaRequest(messages.Message):
     connect = messages.StringField(1)
-    message = messages.StringField(1)
+    message = messages.StringField(2)
 
 
 class MelanomaResponse(messages.Message):
