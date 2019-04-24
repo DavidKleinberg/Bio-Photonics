@@ -21,10 +21,15 @@ from endpoints import message_types
 from endpoints import messages
 from endpoints import remote
 
+import logging
+logging.getLogger('endpoints').setLevel(logging.DEBUG)
+logging.getLogger('endpoints_management').setLevel(logging.DEBUG)
+
 # import dataProcessing as algo
 
 # [END imports]
 
+api_collection = endpoints.api(name='melanoma', version='v1.0')
 
 # [START messages]
 class MelanomaRequest(messages.Message):
@@ -44,7 +49,8 @@ MELANOMA_RESOURCE = endpoints.ResourceContainer(
 
 
 # [START echo_api_class]
-@endpoints.api(name='upload', version='v1')
+@api_collection.api_class(resource_name='upload')
+#@endpoints.api(name='upload', version='v1')
 class DataUpload(remote.Service):
 
     # [START echo_api_method]
@@ -84,7 +90,8 @@ class DataUpload(remote.Service):
 
 
 # [START data_process_api]
-@endpoints.api(name='process', version='v1')
+@api_collection.api_class(resource_name='process')
+#@endpoints.api(name='process', version='v1')
 class DataProcess(remote.Service):
 
     # [START echo_api_method]
@@ -105,7 +112,8 @@ class DataProcess(remote.Service):
 
 
 # [START data_results_api]
-@endpoints.api(name='results', version='v1')
+@api_collection.api_class(resource_name='results')
+#@endpoints.api(name='results', version='v1')
 class MelanomaResults(remote.Service):
 
     # [START echo_api_method]
@@ -125,5 +133,5 @@ class MelanomaResults(remote.Service):
 
 
 # [START api_server]
-api = endpoints.api_server([DataUpload,DataProcess,MelanomaResults])
+api = endpoints.api_server([api_collection])
 # [END api_server]
