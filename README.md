@@ -17,7 +17,7 @@ Install the Endpoints Frameworks v2 library:
 
 ## Deploying to Google App Engine
 
-Generate an OpenAPI file by running: `python lib/endpoints/endpointscfg.py get_openapi_spec main.EchoApi --hostname [YOUR-PROJECT-ID].appspot.com`
+Generate an OpenAPI file by running: `python lib/endpoints/endpointscfg.py get_openapi_spec main.api_collection --hostname melanoma-238619.appspot.com`
 
 Remember to replace [YOUR-PROJECT-ID] with your project ID.
 
@@ -36,3 +36,6 @@ Then, deploy the sample using `gcloud`:
     $ gcloud app deploy
 
 Once deployed, you can access the application at https://your-service.appspot.com
+
+To read the logs:
+	$ gcloud app logs tail

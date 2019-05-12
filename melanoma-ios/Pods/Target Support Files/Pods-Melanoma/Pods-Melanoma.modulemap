@@ -1,0 +1,6 @@
+framework module Pods_Melanoma {
+  umbrella header "Pods-Melanoma-umbrella.h"
+
+  export *
+  module * { export * }
+}

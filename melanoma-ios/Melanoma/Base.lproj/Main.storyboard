@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IEv-FG-U7O">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CameraScreen-->
+        <scene sceneID="Zek-jJ-FHo">
+            <objects>
+                <viewController title="CameraScreen" id="xgA-NN-p1C" customClass="ScanViewController" customModule="Melanoma" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gHI-dl-IfQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="rLW-2R-rAQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h8e-yu-F8J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDc-sU-mti">
+                                <rect key="frame" x="170" y="572" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                <state key="normal" title="Button" image="Image"/>
+                                <connections>
+                                    <action selector="startScanPressed:" destination="xgA-NN-p1C" eventType="touchUpInside" id="qPa-I5-xoZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera" id="as0-7B-vdd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMU-xe-HIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="567" y="-499"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="xJg-id-9be">
+            <objects>
+                <viewController storyboardIdentifier="History" title="History" id="J0a-E6-W6I" customClass="HistoryViewController" customModule="Melanoma" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z3J-n4-FeC"/>
+                        <viewControllerLayoutGuide type="bottom" id="JQv-X9-RIo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HZq-U1-hda">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9iR-lh-A4y">
+                                <rect key="frame" x="20" y="88" width="374" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <items>
+                                    <navigationItem title="Melanoma Scans" id="ArR-74-9DH"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gry-Mt-5Nf">
+                                <rect key="frame" x="20" y="146" width="374" height="605"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="J0a-E6-W6I" id="glN-ZE-kfP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i97-aW-8Bl"/>
+                    <connections>
+                        <outlet property="tableView" destination="gry-Mt-5Nf" id="RgX-os-8ug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OcO-VE-g7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566.66666666666674" y="171.42857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ITi-Rs-Sci">
+            <objects>
+                <navigationController id="IEv-FG-U7O" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Bz-ly-kKD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ruF-Oe-JMa" kind="relationship" relationship="rootViewController" id="om1-zy-cYS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hm-Tv-4z2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1470" y="157"/>
+        </scene>
+        <!--bluetooth-->
+        <scene sceneID="s74-ud-T4x">
+            <objects>
+                <viewController storyboardIdentifier="Bluetooth" title="bluetooth" id="YMg-Ir-FOB" customClass="BluetoothSerial" customModule="Melanoma" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ht-74-e53"/>
+                        <viewControllerLayoutGuide type="bottom" id="pDD-Di-5Ew"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eLP-Vl-wib">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CoreBluetooth Manager:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjy-Va-JMc">
+                                <rect key="frame" x="20" y="128" width="158" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLe-qv-fri">
+                                <rect key="frame" x="20" y="153" width="374" height="48"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="0.61321989529999998" green="0.61321989529999998" blue="0.61321989529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CoreBluetooth Peripheral:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB5-Ua-xvQ">
+                                <rect key="frame" x="20" y="288" width="174" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5t-Qh-FIc">
+                                <rect key="frame" x="20" y="313" width="374" height="48"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="0.61321989529999998" green="0.61321989529999998" blue="0.61321989529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device Not Connected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBI-3s-mMx">
+                                <rect key="frame" x="20" y="369" width="374" height="48"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="0.61321989529999998" green="0.61321989529999998" blue="0.61321989529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12g-sL-MZo">
+                                <rect key="frame" x="20" y="209" width="374" height="48"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="0.61321989529999998" green="0.61321989529999998" blue="0.61321989529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WP-HT-VVz">
+                                <rect key="frame" x="79" y="479" width="257" height="55"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Disconnect"/>
+                                <connections>
+                                    <action selector="DisconnectButtonPressed:" destination="YMg-Ir-FOB" eventType="touchUpInside" id="78r-p4-MGx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="CBConnectedStatus" destination="gBI-3s-mMx" id="hxW-18-Asl"/>
+                        <outlet property="CBManagerStatus" destination="LLe-qv-fri" id="5fT-8t-qy7"/>
+                        <outlet property="CBPeripheralStatus" destination="z5t-Qh-FIc" id="HSO-QV-Nfq"/>
+                        <outlet property="CBScanningStatus" destination="12g-sL-MZo" id="UFP-4j-L0y"/>
+                        <outlet property="DisconnectButton" destination="4WP-HT-VVz" id="BV5-G2-FqI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSZ-8o-Lgu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591" y="906"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="SOz-YC-Oil">
+            <objects>
+                <viewController title="Home" id="ruF-Oe-JMa" customClass="ViewController" customModule="Melanoma" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="giy-vN-gnf"/>
+                        <viewControllerLayoutGuide type="bottom" id="YO6-Cs-6NE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fSC-86-2lK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DC7-Ko-luL">
+                                <rect key="frame" x="31" y="115" width="353" height="103"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Melanoma">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="40" name="Futura-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma3-T7-JlK">
+                                <rect key="frame" x="56" y="303" width="302" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.85655722582205795" blue="0.014067457329287492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="45"/>
+                                <state key="normal" title="scan"/>
+                                <connections>
+                                    <segue destination="xgA-NN-p1C" kind="show" id="vLD-t7-R8N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CU-H6-VyO">
+                                <rect key="frame" x="56" y="440" width="302" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.2349103078" blue="0.47357298539999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="45"/>
+                                <state key="normal" title="bluetooth"/>
+                                <connections>
+                                    <segue destination="YMg-Ir-FOB" kind="show" id="JWa-ee-tMr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7j-Dc-l0S">
+                                <rect key="frame" x="56" y="371" width="302" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.67689285928002429" blue="0.074697039693896627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="45"/>
+                                <state key="normal" title="history"/>
+                                <connections>
+                                    <segue destination="J0a-E6-W6I" kind="show" id="PUI-Tr-A60"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.030518102280000001" green="1" blue="0.85298277379999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tD7-YF-61w"/>
+                    <connections>
+                        <segue destination="xgA-NN-p1C" kind="show" id="36h-kA-cl0"/>
+                        <segue destination="J0a-E6-W6I" kind="show" id="bVH-ne-31S"/>
+                        <segue destination="YMg-Ir-FOB" kind="show" id="kgq-zN-vOt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y92-PX-d8T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591.304347826087" y="156.69642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="256" height="256"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JWa-ee-tMr"/>
+        <segue reference="bVH-ne-31S"/>
+        <segue reference="vLD-t7-R8N"/>
+    </inferredMetricsTieBreakers>
+</document>
