@@ -6,16 +6,27 @@
 
 <p align="center">
   <img src="docs/home_screen.png" alt="iOS App" width=50%/>
+</p>
   
+<p align="center">
   App deployed on iPhone 6s</center>
+</p>
   
+<p align="center">
   <img src="docs/main_screen.png" alt="iOS App" width=50%/>
+</p>
   
+<p align="center">
   Melanoma main screen
+</p>
   
-  <img src="docs/uno_leds_pwr.JPG" alt="Hardware Prototype" width=50%/>
+<p align="center">
   <img src="docs/uno_ble.JPG" alt="Hardware Prototype" width=50%/>
   <img src="docs/proto_leds.JPG" alt="Hardware Prototype" width=50%/>
+  <img src="docs/uno_leds_pwr.JPG" alt="Hardware Prototype" width=50%/>
+</p>  
+
+<p align="center">
   Device powered ON by 1000mAh lithium ion battery
 </p>
 
