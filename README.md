@@ -1,6 +1,6 @@
 # Multispectral Imaging for Melanoma Diagnosis
 
-**David Kleinberg & Pete Salvino<br />Johns Hopkins University <br />Bio-Photonics Lab**
+**Johns Hopkins University<br />Bio-Photonics Lab<br />David Kleinberg**
 
-~ *An affordable solution to uninvasive melanoma detection* ~
+~ *An affordable solution to noninvasive melanoma detection* ~
 
