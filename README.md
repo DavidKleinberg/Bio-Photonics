@@ -4,13 +4,14 @@
 
 ~ *An affordable solution to noninvasive melanoma detection* ~
 
-![iOS App](docs/home_screen.png)
-App deployed on iPhone 6s
+<img src="docs/home_screen.png" alt="iOS App" width=50%/>
+<center>App deployed on iPhone 6s</center>
 
-![iOS App](docs/main_screen.png)
-Melanoma main screen
+<img src="docs/main_screen.png" alt="iOS App" width=50%/>
+<center>Melanoma main screen</center>
 
-![Hardware Prototype](docs/uno_leds_pwr.JPG)
-![Hardware Prototype](docs/uno_ble.JPG)
-![Hardware Prototype](docs/uno_ble_pwr.JPG)
-Device powered ON by 1000mAh lithium ion battery
+<img src="docs/uno_leds_pwr.JPG" alt="Hardware Prototype" width=50%/>
+<img src="docs/uno_ble.JPG" alt="Hardware Prototype" width=50%/>
+<img src="docs/proto_leds.JPG" alt="Hardware Prototype" width=50%/>
+<center>Device powered ON by 1000mAh lithium ion battery</center>
+
