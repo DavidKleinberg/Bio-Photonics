@@ -5,19 +5,12 @@
 ~ *An affordable solution to noninvasive melanoma detection* ~
 
 <p align="center">
-  <img src="docs/home_screen.png" alt="iOS App" width=50%/>
+  <img src="docs/home_screen.png" alt="iOS App" width=40%/>
+  <img src="docs/main_screen.png" alt="iOS App" width=40%/>
 </p>
   
 <p align="center">
-  App deployed on iPhone 6s</center>
-</p>
-  
-<p align="center">
-  <img src="docs/main_screen.png" alt="iOS App" width=50%/>
-</p>
-  
-<p align="center">
-  Melanoma main screen
+  App deployed on iPhone 6s & Melanoma main screen</center>
 </p>
   
 <p align="center">
